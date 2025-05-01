@@ -7,7 +7,7 @@ NGINX="android-nginx"
 echo -e "\n 1.create ${REDROID}"
 docker run -itd --name=${REDROID} \
     --memory-swappiness=0 \
-    --privileged --pull always \
+    --privileged \
     -v ./redroid/data:/data \
     redroid/redroid:8.1.0-latest \
     androidboot.hardware=mt6891 ro.secure=0 ro.boot.hwc=GLOBAL    ro.ril.oem.imei=861503068361145 ro.ril.oem.imei1=861503068361145 ro.ril.oem.imei2=861503068361148 ro.ril.miui.imei0=861503068361148 ro.product.manufacturer=Xiaomi ro.build.product=chopin \
